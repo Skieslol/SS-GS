@@ -1,10 +1,33 @@
 const WSS = require("ws").Server;
 const PORT = process.env.PORT || 1234;
 const { warn, log } = require('console');
+const {readFileSync } = require("fs");
 
 var Server = new WSS({ port: PORT }, () => {
     log("Server Started!");
 });
+
+function ReplicationTest() {
+    let player;
+    let playerId = null;
+    let asset;
+    let displayName;
+
+    if (player) {
+        warn("No Finished ;/");
+    }
+}
+
+class Replication extends ReplicationTest {
+    constructor(id, player) {
+        super();
+        this.id = id;
+        this.player = player;
+        this.bShowPlayerName = true;
+    }
+}
+
+new Replication();
 
 function GetWeaponClassName(Class) {
     switch (Class) {
