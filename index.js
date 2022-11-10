@@ -3,6 +3,9 @@ const PORT = process.env.PORT || 1234;
 const { warn, log } = require('console');
 const {readFileSync } = require("fs");
 
+const { castDisplay } = require("./skill/utils");
+
+
 var Server = new WSS({ port: PORT }, () => {
     log("Server Started!");
 });
@@ -10,11 +13,21 @@ var Server = new WSS({ port: PORT }, () => {
 function ReplicationTest() {
     let player;
     let playerId = null;
-    let asset;
     let displayName;
 
-    if (player) {
-        warn("No Finished ;/");
+
+    switch (player && playerId && displayName) {
+        case 1: {
+            /**
+             * NUUUUU
+             */
+        }
+        case 2: {
+            // return playerId.toString().split(" ");
+        }
+        case 3: {
+            return castDisplay(displayName.toString());
+        }
     }
 }
 
